@@ -59,7 +59,7 @@ export default {
         .sendPasswordResetEmail(this.email)
         .then(() => {
           this.modalMessage =
-            "If your account exists, you will receive a email";
+            "If your account exists, you will receive an email :)";
           this.loading = false;
           this.modalActive = true;
         })
