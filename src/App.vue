@@ -1,6 +1,6 @@
 <template>
   <div class="app-wrapper">
-    <div class="app">
+    <div class="app" v-if="this.$store.state.postLoaded">
       <Navigation v-if="!navigation" />
       <router-view />
       <Footer v-if="!navigation" />
@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Navigation from "@/components/Navigation.vue";
-import Footer from "@/components/Footer.vue";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import firebase from "firebase/app";
 import "firebase/auth";
 export default {
@@ -23,13 +23,13 @@ export default {
   },
   created() {
     firebase.auth().onAuthStateChanged((user) => {
-      this.$store.commit("userUpdate", user);
+      this.$store.commit("updateUser", user);
       if (user) {
-        this.$store.dispatch("getCurrentUser");
-        console.log(this.$store.state.profileEmail);
+        this.$store.dispatch("getCurrentUser", user);
       }
     });
     this.checkRoute();
+    this.$store.dispatch("getPost");
   },
   mounted() {},
   methods: {
@@ -84,6 +84,7 @@ export default {
 .link-light {
   color: #fff;
 }
+
 .arrow {
   margin-left: 8px;
   width: 12px;
@@ -148,6 +149,12 @@ button,
   background-color: rgba(128, 128, 128, 0.5) !important;
 }
 
+.error {
+  text-align: center;
+  font-size: 12px;
+  color: red;
+}
+
 .blog-card-wrap {
   position: relative;
   padding: 80px 16px;
@@ -155,6 +162,7 @@ button,
   @media (min-width: 500px) {
     padding: 100px 16px;
   }
+
   .blog-cards {
     display: grid;
     gap: 32px;

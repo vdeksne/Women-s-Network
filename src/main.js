@@ -11,9 +11,9 @@ Vue.use(Vue2Editor);
 Vue.config.productionTip = false;
 
 let app;
-firebase.auth().onAuthStateChanged((user) => {
+firebase.auth().onAuthStateChanged(() => {
   if (!app) {
-    app = new Vue({
+    new Vue({
       router,
       store,
       render: (h) => h(App),

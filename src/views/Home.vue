@@ -32,9 +32,9 @@
 </template>
 
 <script>
-import BlogPost from "@/components/BlogPost.vue";
-import BlogCard from "@/components/BlogCard.vue";
-import Arrow from "@/assets/Icons/arrow-right-light.svg";
+import BlogPost from "../components/BlogPost";
+import BlogCard from "../components/BlogCard";
+import Arrow from "../assets/Icons/arrow-right-light.svg";
 
 export default {
   name: "Home",
@@ -63,6 +63,15 @@ export default {
     };
   },
   computed: {
+    blogPostsFeed() {
+      return this.$store.getters.blogPostsFeed;
+    },
+    blogPostsCards() {
+      return this.$store.getters.blogPostsCards;
+    },
+    user() {
+      return this.$store.state.user;
+    },
     sampleBlogCards() {
       return this.$store.state.sampleBlogCards;
     },
@@ -98,15 +107,17 @@ export default {
         margin-left: auto;
       }
     }
+
     h2 {
       font-weight: 300;
       font-size: 32px;
       max-width: 425px;
+      width: 100%;
       text-align: center;
       text-transform: uppercase;
       @media (min-width: 800px) {
         text-align: initial;
-        font-size: 48px;
+        font-size: 40px;
       }
     }
   }
