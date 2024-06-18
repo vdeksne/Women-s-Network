@@ -73,7 +73,7 @@ export default {
       border-radius: 20px;
       top: 0;
       left: 0;
-      background: #303030;
+      background: #bb2649;
       transform: scale(1.1);
       transition: 750ms ease all;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),

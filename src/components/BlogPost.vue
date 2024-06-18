@@ -157,7 +157,7 @@ export default {
 
 .no-user:first-child {
   .blog-content {
-    background-color: #303030;
+    background-color: #0d1f2d;
     color: #fff;
   }
 }

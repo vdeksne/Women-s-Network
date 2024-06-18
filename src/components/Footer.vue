@@ -4,7 +4,7 @@
       <div class="left">
         <div class="col-1">
           <router-link class="header" :to="{ name: 'Home' }"
-            >FireBlogs</router-link
+            >Women's Network</router-link
           >
           <ul>
             <li>
@@ -71,7 +71,7 @@ export default {
 footer {
   margin-top: auto;
   padding: 100px 25px;
-  background-color: #303030;
+  background-color: #0d1f2d;
   .container {
     display: flex;
     flex-direction: column;

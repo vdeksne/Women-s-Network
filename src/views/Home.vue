@@ -39,9 +39,9 @@ export default {
   data() {
     return {
       welcomeScreen: {
-        title: "Welcome!",
+        title: "Women's Network: Empowering Women",
         blogPost:
-          "Weekly blog articles with all things programming including HTML, CSS, JavaScript and more. Register today to never miss a post!",
+          "The Women's Network is a vibrant community dedicated to empowering women through personal and professional development, networking, and mentorship. Join us to connect, learn, and thrive.",
         welcomeScreen: true,
         photo: "coding",
       },
