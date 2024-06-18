@@ -1,25 +1,21 @@
 <template>
   <div class="blog-card">
-    <div v-show="editPost" class="icons">
+    <div class="icons">
       <div class="icon">
         <Edit class="edit" />
       </div>
 
-      <div class="icon">
+      <div @click="deletePost" class="icon">
         <Delete class="delete" />
       </div>
     </div>
 
-    <img
-      :src="require(`../assets/blogCards/${post.blogCoverPhoto}.jpg`)"
-      alt=""
-    />
+    <!-- Directly bind the Firebase Storage URL to the src attribute -->
+    <img :src="post.blogCoverPhoto" alt="Blog cover photo" />
 
     <div class="info">
       <h4>{{ post.blogTitle }}</h4>
-
       <h6>Posted on: {{ post.blogDate }}</h6>
-
       <router-link class="link" to="#">
         View the Post
         <Arrow class="arrow" />
@@ -32,13 +28,21 @@
 import Arrow from "../assets/Icons/arrow-right-light.svg";
 import Edit from "../assets/Icons/edit-regular.svg";
 import Delete from "../assets/Icons/trash-regular.svg";
+
 export default {
   name: "blogCard",
   props: ["post"],
-  components: {
-    Arrow,
-    Edit,
-    Delete,
+  components: { Arrow, Edit, Delete },
+  methods: {
+    deletePost() {
+      this.$store.dispatch("deletePost", this.post.blogID);
+    },
+    editBlog() {
+      this.$router.push({
+        name: "EditBlog",
+        params: { blogid: this.post.blogID },
+      });
+    },
   },
   computed: {
     editPost() {
