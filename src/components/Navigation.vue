@@ -4,8 +4,7 @@
       <div class="branding">
         <router-link class="header" :to="{ name: 'Home' }">
           <svg
-            width="345"
-            height="79"
+            class="logo-icon-wn"
             viewBox="0 0 345 79"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -301,11 +300,11 @@ header {
               width: 40px;
               height: 40px;
               background-color: #fff;
-              color: #303030;
+              color: #0d1f2d;
               display: flex;
               align-items: center;
               justify-content: center;
-              border-radius: 50%;
+              border-radius: 5px;
             }
 
             .right {
@@ -372,7 +371,7 @@ header {
     flex-direction: column;
     position: fixed;
     height: 100%;
-    background-color: #303030;
+    background-color: #0d1f2d;
     top: 0;
     left: 0;
 
@@ -397,6 +396,17 @@ header {
 
   .mobile-nav-leave-to {
     transform: translateX(-250px);
+  }
+  .logo-icon-wn {
+    width: 21.5625rem;
+    height: 4.90406rem;
+  }
+  // mobile
+  @media (max-width: 480px) {
+    .logo-icon-wn {
+      width: 7.5625rem;
+      height: 1.90406rem;
+    }
   }
 }
 </style>

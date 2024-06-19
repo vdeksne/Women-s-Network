@@ -6,7 +6,11 @@
         <h2 v-else>{{ post.blogTitle }}</h2>
         <p v-if="post.welcomeScreen">{{ post.blogPost }}</p>
         <p class="content-preview" v-else v-html="post.blogHTML"></p>
-        <router-link class="link link-light" v-if="post.welcomeScreen" to="#">
+        <router-link
+          class="link link-light"
+          v-if="post.welcomeScreen"
+          :to="{ name: 'Login' }"
+        >
           Login/Register<Arrow class="arrow arrow-light" />
         </router-link>
         <router-link
@@ -98,11 +102,11 @@ export default {
         font-size: 13px;
         max-height: 24px;
         width: 250px;
+        height: auto;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
+        text-overflow: ellipsis !important;
       }
-
       .link {
         display: inline-flex;
         align-items: center;

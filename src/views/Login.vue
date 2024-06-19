@@ -7,7 +7,7 @@
           >Register</router-link
         >
       </p>
-      <h2>Login to FireBlogs</h2>
+      <h2>Login to Women's Network</h2>
       <div class="inputs">
         <div class="input">
           <input type="text" placeholder="Email" v-model="email" />
@@ -160,7 +160,7 @@ export default {
       position: absolute;
       background-color: #fff;
       transform: rotateZ(3deg);
-      width: 60px;
+      width: 75px;
       right: -30px;
       height: 101%;
       @media (min-width: 900px) {
