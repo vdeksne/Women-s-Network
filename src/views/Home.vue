@@ -22,7 +22,7 @@
       <div class="container">
         <h2>never miss a post. Register for your free account today!</h2>
         <router-link class="router-button" :to="{ name: 'Login' }">
-          Register for Women'a Network <Arrow class="arrow arrow-light" />
+          Register for Women's Network <Arrow class="arrow arrow-light" />
         </router-link>
       </div>
     </div>

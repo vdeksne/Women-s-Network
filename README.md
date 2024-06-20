@@ -1,3 +1,9 @@
+# YOUR PROJECT TITLE
+
+#### Video Demo: <URL HERE>
+
+#### Description:
+
 Women's Network (WN) is a platform for professional and personal development tailored towards women of the global community. The app is designed in Figma and developed with Vue.js and Firebase; it requires knowledge of the latter development tools. The aim of Women's Network is to provide a platform for networking, inspiration and sharing ideas through insightful blog posts made by WN registered users.
 
 People are able to read blog posts, register on the platform, as well as become admins to write and publish new articles - edit them, add images or videos and delete if needed. There are three main pages: Home, Blogs and Register/ Login.
@@ -6,9 +12,8 @@ Home contains a welcome part, as well as featured and recent blog posts. Blogs s
 
 Women's Network is a modern and minimalistic idea sharing tool with a smooth and responsive user experience.
 
-What each of the files you wrote for the project contains and does:
+## What each of the files you wrote for the project contains and does:
 
-Here is a list of all main files and what they do: :
 ./firestore.indexes.json: Configuration file for Firestore database indexes.
 ./src: Source directory containing all the application code.
 ./src/App.vue: Main Vue component that serves as the root component of the application.
@@ -65,7 +70,7 @@ Here is a list of all main files and what they do: :
 ./src/router: Directory containing Vue Router configuration files.
 ./src/router/index.js: Main file for configuring the application's routes.
 
-If you debated certain design choices, explaining why you made them:
+## If you debated certain design choices, explaining why you made them:
 
 Some design choices include the use of colours: dark-blue and violet-red. Font is Poppins - it goes for a minimalistic and modern look with simple, clean lines. In my design, I made specific color choices to convey particular values and emotions.
 
@@ -75,9 +80,11 @@ Violet-red in the design symbolizes creativity and innovation because violet-red
 
 By using dark-blue and violet-red in the design, I aimed to balance the stability and professionalism of dark-blue with the creativity and energy of violet-red. This creates a dynamic yet trustworthy aesthetic that appeals to a broad audience, suggesting a blend of reliability with innovative flair.
 
+Note: Copilot was used to assist smoother writing and help with answering harder questions for debugging.
+
 Thank you!
 
-# fireblogs
+# Women's Network
 
 ## Project setup
 
